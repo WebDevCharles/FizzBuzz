@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>APP NAME: Coding Challenge By Charles Hall</title>
+    <title>FizzBuzz: Coding Challenge By Charles Hall</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,8 +32,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="/img/favicon-32x32.png" rel="Personal Mark"
-                    class="d-inline-block align-text-top me-2">APP
-                NAME</a>
+                    class="d-inline-block align-text-top me-2">FizzBuzz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,25 +59,58 @@
         </div>
     </nav>
 
-    <main class="flex-shrink-0">
-        <div class="container mt-5">
-            <h1>To Do List:</h1>
-            <div class="row align-items-end">
-                <div class="col">
-                    <label for="txtMessage" class="form-label">Item</label>
-                    <input type="text" class="form-control" id="txtMessage" name="txtMessage" placeholder="Enter Item">
+    <section class="flex-shrink-0 py-5">
+        <div class="container px-5 my-5">
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col border-right">
+                    <h1 class="fw-bolder">
+                        FizzBuzz: A Coding Challenge
+                    </h1>
+                    <hr>
+                    <p class="mb-4">
+                        When it counts you Fizz Buzz. A javascript coding exercise using loops. Write a
+                        program that prints the numbers from 1 to 100 and for multiples of ‘3’ display
+                        <strong>“Fizz”</strong> instead of
+                        the number and for the multiples of ‘5’ display <strong>“Buzz”</strong>. If a mulitple of both
+                        display <strong>"FizzBuzz"</strong>.
+                    </p>
+                    <h3>Instructions:</h3>
+                    <hr>
+                    <p>
+                        Enter a "fizz" and a "buzz" value. Press the button and the values will appear.
+                    </p>
                 </div>
-                <div class="col">
-                    <button id="btnSubmit" class="btn btn-primary">Add</button>
+                <div class="col mb-5">
+                    <h3>Enter Custom Values:</h3>
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <label for="fizzValue" class="form-label">Fizz Value</label>
+                                <input name="fizzValue" id="fizzValue" type="text" class="form-control"
+                                    placeholder="Enter Item" value="3">
+                            </div>
+                            <div class="col">
+                                <label for="buzzValue" class="form-label">Buzz Value</label>
+                                <input name="buzzValue" id="buzzValue" type="text" class="form-control"
+                                    placeholder="Enter Item" value="5">
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-center mt-3">
+                                <button id="btnSubmit" type="button" class="btn btn-dark">FizzBuzz! (Click Me)</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h3>Results:</h3>
+                    <hr>
+                    <div class="messageStyle mt-5">
+                        <div id="results" class="row row-cols-5">
+                            <!-- Results Go Here -->
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="messageStyle mt-5">
-                <ol id="results" class="list-group list-group-numbered">
-
-                </ol>
             </div>
         </div>
-    </main>
+    </section>
+
     <footer class="footer mt-auto py-3 bg-black sticky-footer">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-lg-3 gy-2">
@@ -113,7 +145,7 @@
     <!-- Custom JS -->
     <script src="/js/site.js"></script>
     <script>
-        document.getElementById("btnSubmit").addEventListener("click", getMessage);
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
     </script>
 
 </body>

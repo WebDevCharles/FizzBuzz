@@ -43,12 +43,32 @@ main>.container {
 }
 
 .checklist i {
-    color: var(--ch-secondary-color);
+    color: var(--ch-dark-color);
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .messageStyle {
     font-size: 1.5rem;
+}
+
+.fizzBuzz {
+    color: blue;
     font-weight: bold;
+}
+
+.fizz {
+    color: red;
+    font-weight: bold;
+}
+
+.buzz {
+    color: purple;
+    font-weight: bold;
+}
+
+@media (min-width: 767.98px) {
+    .border-right {
+        border-right: 1px solid lightgrey;
+    }
 }
